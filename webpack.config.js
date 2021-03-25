@@ -13,6 +13,11 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.html$/,
+                exclude: /node_modules/,
+                use: 'raw-loader',
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
@@ -39,22 +44,14 @@ module.exports = {
         ],
     },
     plugins: [
-        new MiniCssExtractPlugin({ 
-            filename: 'index.css' 
+        new MiniCssExtractPlugin({
+            filename: 'index.css'
         }),
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 3000,
             files: [
-                'www/index.html',
-                'www/importPhoto.html',
-                'www/myData.html',
-                'www/newData.html',
-                'www/camera.html',
-                'www/informations.html',
-                'www/settings.html',
-                'www/share-popup.html',
-
+                'www/index.html'
                 // add other files to watch for hot reload
             ],
             server: {

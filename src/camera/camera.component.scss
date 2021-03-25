@@ -1,0 +1,53 @@
+.capture{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.webcam {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.photo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    visibility: hidden;
+}
+
+.btnPhoto{
+    visibility: hidden;
+    text-align: center;
+    bottom: 5%;
+    z-index: 999;
+}
+
+.screenshot {
+    text-align: center;
+}
+
+.tryAgain {
+    text-align: center;
+    visibility: hidden;
+}
+
+.snap {
+    position: fixed;
+    bottom: 5vh;
+}
+
+.photo-taken{
+    background-color: rgba($color: #000000, $alpha: 0.5);
+}
